@@ -60,10 +60,12 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
-keymap("n", "<leader>Y","\"+y",opts)
-keymap("n", "<leader>y","\"*y",opts)
-keymap("n", "<leader>p","\"*p",opts)
-keymap("n", "<leader>P","\"+P",opts)
+keymap("n", "<leader>Y","\"+y", opts)
+keymap("n", "<leader>y","\"*y", opts)
+keymap("n", "<leader>P","\"+P", opts)
+keymap("n", "<leader>p","\"*p", opts)
+-- keymap("n", "<leader>w","w!<CR>", opts)
+-- keymap("n", "<leader>q","q!<CR>", opts)
 
 -- Terminal --
 -- Better terminal navigation

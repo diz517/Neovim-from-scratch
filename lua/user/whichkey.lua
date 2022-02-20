@@ -85,10 +85,11 @@ local mappings = {
     "Buffers",
   },
   ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
-  ["w"] = { "<cmd>w!<CR>", "Save" },
-  ["q"] = { "<cmd>q!<CR>", "Quit" },
-  ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
-  ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
+  ["m"] = { "<cmd>MarkdownPreview<cr>", "MarkdownPreview" },
+  ["w"] = { "<cmd>w!<cr>", "Save" },
+  ["q"] = { "<cmd>q!<cr>", "Quit" },
+  ["c"] = { "<cmd>Bdelete!<cr>", "Close Buffer" },
+  ["h"] = { "<cmd>nohlsearch<cr>", "No Highlight" },
   ["f"] = {
     "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
     "Find files",
@@ -107,7 +108,7 @@ local mappings = {
 
   g = {
     name = "Git",
-    g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
+    g = { "<cmd>lua _LAZYGIT_TOGGLE()<cr>", "Lazygit" },
     j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
     k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
     l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },

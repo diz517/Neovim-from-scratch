@@ -61,6 +61,13 @@ return packer.startup(function(use)
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
+  use {
+    "mcchrish/zenbones.nvim",
+    -- Optionally install Lush. Allows for more configuration or extending the colorscheme
+    -- If you don't want to install lush, make sure to set g:zenbones_compat = 1
+    -- In Vim, compat mode is turned on as Lush only works in Neovim.
+    requires = "rktjmp/lush.nvim"
+}
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -93,7 +100,13 @@ return packer.startup(function(use)
   -- Git
   use "lewis6991/gitsigns.nvim"
 
+  -- Markdown
+  use {
+  'iamcco/markdown-preview.nvim',
   -- Automatically set up your configuration after cloning packer.nvim
+    ft = 'markdown',
+    run = 'cd app && yarn install'
+  }
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
     require("packer").sync()
